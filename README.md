@@ -148,4 +148,5 @@ Xin chân thành cảm ơn các nguồn tài liệu và công cụ đã hỗ tr�
 - **Nickname:** Re3on  
 
 *Dự án là bài tập lớn môn "Lập trình hướng đối tượng" - Học viện Công nghệ Bưu chính Viễn thông.*  
-*Sản phẩm đã được cải tiến với thêm các chức năng và giao diện mới.*
+*Sản phẩm sẽ được cải tiến với thêm các chức năng và giao diện mới trong tương lai ............ xa .*
+*Sản phẩm chắc chắn còn có nhiều thiếu sót và không thể tránh gặp các bugs khi sử dụng. Xin cảm ơn tất cả mọi người đã ghé thăm, nếu hay hãy để lại 1 sao cho mình nhé !*
