@@ -4,6 +4,8 @@
 ## Mô Tả
 Đây là một website quản lý cửa hàng sách trực tuyến, hỗ trợ người dùng (Admin và User) thực hiện các thao tác quản lý và mua sách. Dự án được phát triển với mục tiêu áp dụng các kiến thức về lập trình hướng đối tượng và xây dựng web động.
 
+![image](https://github.com/user-attachments/assets/be304765-0035-44a7-86f8-4ee6a0f9405d)
+
 ---
 
 ## Công Nghệ Sử Dụng
@@ -74,15 +76,21 @@ src/
 ---
 
 ## Hướng Dẫn Cài Đặt
-### **Bước 1:** Clone dự án
+### **Bước 1:** Clone dự án và cài đặt các gói thư viện cần thiết
 ```bash
 git clone https://github.com/Baodeptraii/Bookstore_Manegement_Web
 ```
+- Nếu code hiện các lỗi, hãy kiểm tra các gói thư viện, các file .jar đã được cài đặt hay chưa.
+- Kiểm tra file pom.xml và các dependencies trong đó.
 
 ### **Bước 2:** Tạo cơ sở dữ liệu
 - Mở MySQL Workbench.
 - Tạo một database mới với tên `book_web`.
 - Import file SQL (nếu có) hoặc tự tạo bảng phù hợp.
+- Hình ảnh mô tả các bảng dữ liệu :
+- 
+  ![image](https://github.com/user-attachments/assets/31c75205-5630-4d9d-89df-fba0d3db0722)
+
 
 
 ### **Bước 3:** Cấu hình kết nối cơ sở dữ liệu
@@ -121,18 +129,18 @@ http://localhost:8080/bookstore
 ---
 
 ## Demo
-Link video demo: [YouTube]( )
+Link video demo: [YouTube](https://youtu.be/7XH9WSQsqxI)
 
 ---
 
-## Cảm Ơn
+## Lời Cảm Ơn
 Xin chân thành cảm ơn các nguồn tài liệu và công cụ đã hỗ trợ quá trình phát triển sản phẩm:
 - **ChatGPT**
 - **Google**
 - **StackOverflow**
 - **YouTube**
 - **Github**
-- **Và đặc biệt là anh Ấn Độ -> https://www.youtube.com/watch?v=3cDcUtY0uLQ&list=PLQTYNpk8jwk33-kHcV0xdBy4L617EVnAt**
+- **Và đặc biệt là -> [anh Ấn Độ](https://www.youtube.com/watch?v=3cDcUtY0uLQ&list=PLQTYNpk8jwk33-kHcV0xdBy4L617EVnAt)**
 ---
 
 ## Tác Giả
