@@ -1,0 +1,152 @@
+1. Giới thiệu dự án
+1.1. Đặt vấn đề
+Với sự phát triển vượt bậc của thương mại điện tử, mua sắm trực tuyến ngày càng trở thành xu hướng phổ biến, mang lại sự tiện lợi cho người tiêu dùng. Tuy nhiên, các cửa hàng sách truyền thống đang đối mặt với nhiều thách thức như quản lý hàng hóa, tiếp cận khách hàng trực tuyến, và cạnh tranh với các nền tảng thương mại điện tử lớn.
+Do đó, nhu cầu về một hệ thống quản lý cửa hàng sách trực tuyến trở nên cấp thiết. Hệ thống này không chỉ hỗ trợ quản lý sách và giao dịch một cách hiệu quả mà còn nâng cao trải nghiệm người dùng thông qua các tính năng thân thiện và tiện lợi.
+1.2. Đề xuất giải pháp
+Dự án này nhằm xây dựng một hệ thống quản lý cửa hàng sách trực tuyến, với các chức năng chính như:
+-    Quản lý danh mục sách: Dễ dàng thêm, xóa, sửa đổi và phân loại sách.
+-	Tìm kiếm và đặt mua sách: Hỗ trợ người dùng tìm kiếm nhanh chóng dựa trên từ khóa, thể loại, tác giả, hoặc giá cả, đồng thời cho phép đặt hàng và thanh toán trực tuyến.
+-	Quản lý tài khoản người dùng: Cung cấp giao diện quản trị cho người bán và giao diện thân thiện cho khách hàng.
+-	Quản lý giao dịch: Theo dõi, xử lý và lưu trữ thông tin mua bán một cách rõ ràng, chính xác, đảm bảo an toàn thông tin.
+Hệ thống được thiết kế theo kiến trúc MVC (Model-View-Controller), giúp tách biệt giữa giao diện người dùng, logic nghiệp vụ và quản lý dữ liệu. Điều này đảm bảo hệ thống có tính modular, dễ dàng bảo trì và mở rộng trong tương lai.
+Mục tiêu dự án:
+-	Tạo ra một nền tảng hỗ trợ hiệu quả cho các cửa hàng sách trong việc chuyển đổi số.
+-	Mang lại trải nghiệm tốt nhất cho người dùng khi mua sắm trực tuyến.
+-	Đảm bảo hệ thống hoạt động ổn định, bảo mật, và dễ sử dụng cho cả người quản lý và khách hàng.
+2. Kỹ thuật công nghệ sử dụng
+2.1. Ngôn ngữ lập trình
+Java: Là ngôn ngữ chính cho phần backend, triển khai các servlet, lớp DAO (Data Access Object), và các lớp xử lý logic.
+JSP (Java Server Pages): Được dùng cho giao diện người dùng (frontend), xử lý logic động trực tiếp trên các trang web.
+CSS: Sử dụng để định dạng và tạo giao diện người dùng hấp dẫn.
+2.2. Cơ sở dữ liệu
+MySQL : Sử dụng MySQL để lưu trữ các bảng dữ liệu của các đối tượng.
+JDBC (Java Database Connectivity): Dự án sử dụng JDBC thông qua lớp DBConnect để kết nối và thao tác với cơ sở dữ liệu. Điều này cho phép truy vấn, cập nhật, và quản lý dữ liệu từ cơ sở dữ liệu bên dưới.
+2.3. Framework và Mô hình kiến trúc
+Mô hình MVC (Model-View-Controller):
+-	Model: Đại diện dữ liệu và các thao tác xử lý dữ liệu thông qua các lớp DAO, DAOImpl, và các thực thể (entity) như Book_data, User, Cart, Order.
+-	View: Hiển thị giao diện người dùng thông qua các file JSP, sử dụng CSS để định dạng giao diện.
+-	Controller: Điều hướng luồng dữ liệu và xử lý các yêu cầu HTTP thông qua các servlet (chia thành admin và user).
+-	DAO Pattern: Được sử dụng để tách biệt logic truy vấn cơ sở dữ liệu với logic xử lý nghiệp vụ. Điều này đảm bảo mã nguồn dễ bảo trì và tái sử dụng.
+
+3. Chi tiết dự án
+3.1 Tổ chức nhóm
+Trưởng nhóm (Leader):
+-	Chịu trách nhiệm lên kế hoạch, phân chia nhiệm vụ và giám sát tiến độ dự án.
+-	Đảm bảo chất lượng và đúng hạn các thành phẩm.
+Backend Developer:
+-	Phát triển logic xử lý ở phía server, bao gồm các servlet và DAO.
+-	Xây dựng và tối ưu hóa kết nối cơ sở dữ liệu.
+Frontend Developer:
+-	Phát triển giao diện người dùng bằng JSP và CSS.
+-	Tích hợp giao diện với backend.
+Tester:
+-	Kiểm thử các tính năng sau khi phát triển.
+-	Đảm bảo ứng dụng hoạt động đúng yêu cầu và không có lỗi.
+
+3.2. Các chức năng đã thực hiện
+Quản lý sách (dành cho admin):
+-	Thêm, sửa, xóa, thay đổi thông tin của sách trong cửa hàng.
+-	Kiểm tra thông tin, xóa, tìm kiếm của tất cả các đơn hàng.
+-	Đăng nhập/đăng xuất.
+Quản lý người dùng:
+-	Đăng ký tài khoản.
+-	Đăng nhập/đăng xuất.
+-	Chỉnh sửa thông tin cá nhân.
+-	Xem chi tiết sách có trong cửa hàng.
+-	Đặt hàng, thanh toán.
+-	Bán sách cũ, kiểm tra sách cũ đang bán
+-	Kiểm tra đơn hàng đã đặt hàng.
+Giỏ hàng:
+-	Người dùng có thể thêm sách vào giỏ hàng.
+-	Xem danh sách các mặt hàng trong giỏ.
+-	Xóa sách khỏi giỏ hàng.
+Quản lý đơn hàng:
+-	Xử lý đặt hàng từ người dùng.
+-	Hiển thị trạng thái đơn hàng cho cả người dùng và quản trị viên.
+-	Cho phép quản trị viên xem và hủy các đơn hàng chưa xử lý.
+Tìm kiếm và phân loại sách:
+-	Hỗ trợ tìm kiếm theo tên sách, danh mục, giá cả, hoặc sách mới/cũ.
+-	Lọc sách theo tiêu chí "sách mới", "sách cũ" và "sách gần đây".
+Triển khai giao diện thân thiện:
+-	Cung cấp giao diện đơn giản và dễ sử dụng cho người dùng.
+-	Giao diện quản trị viên tối ưu hóa để quản lý hệ thống.
+3.3. Tổ chức dự án
+Môi trường cài đặt:
+-	Backend: Cài đặt Apache Tomcat làm server ứng dụng.
+-	Cơ sở dữ liệu: Sử dụng MySQL để lưu trữ dữ liệu.
+-	Frontend: Chạy trên các trình duyệt phổ biến như Chrome hoặc Firefox.
+Frontend :
+Tất cả các file jsp, css, các thư mục lưu trữ ảnh đều nằm trong thư mục lớn webapp.
+Thư mục webapp/admin: Chứa các trang dành riêng cho quản trị viên, bao gồm:
+add_book.jsp: Thêm sách mới vào hệ thống.
+all_book.jsp: Xem tất cả thông tin sách.
+allCss.jsp, footer.jsp, home.jsp, navbar.jsp, style.css : Thiết kế giao diện.
+delete_book.jsp: Xóa sách khỏi danh mục.
+edit_book.jsp: Sửa thông tin sách.
+orders.jsp: Quản lý đơn hàng của người dùng.
+search.jsp: Tìm kiếm đơn hàng.
+Thư mục webapp:
+Chứa các trang JSP dành cho người dùng, như:
+all_new ( old / recent ) _ book.jsp, view_book.jsp: Xem sách theo tiêu chí “mới”, “cũ”, “gần đây” và xem chi tiết sách.
+login.jsp, register.jsp: Trang đăng nhập, đăng ký.
+cart.jsp: Hiển thị giỏ hàng.
+check_order.jsp, order.jsp: Xử lý đơn hàng.
+edit_profile.jsp: Cập nhật thông tin cá nhân.
+home.jsp, index.jsp: Giao diện trang chủ của người dùng.
+old_book.jsp, sell_book.jsp: Quản lý việc bán sách cũ của người dùng.
+setting.jsp: Trang cài đặt, tiện ích.
+Backend : 
+Thư mục java/com: Chứa toàn bộ mã nguồn backend.
+Thư mục admin.servlet: Gồm các servlet phục vụ chức năng quản trị:
+BooksAdd: Thêm sách mới.
+BooksEdit: Sửa thông tin sách.
+BooksDelete: Xóa sách.
+OrderRemove: Xử lý hủy đơn hàng.
+Thư mục user.servlet: Gồm các servlet phục vụ người dùng:
+AddOldBook: Thêm sách cũ.
+DeleteOldBook: Xóa sách cũ.
+LoginServlet: Xử lý đăng nhập.
+LogoutServlet: Xử lý đăng xuất.
+RegisterServlet: Đăng ký tài khoản.
+CartServlet: Quản lý giỏ hàng.
+OrderServlet: Quản lý đơn hàng.
+RemoveBookCart: Loại bỏ giỏ hàng.
+UpdateProfile: Cập nhật thông tin người dùng.
+Thư mục DAO: Tổ chức logic xử lý truy vấn cơ sở dữ liệu, được chia theo từng module:
+BookDAO, BookDAOImpl: Quản lý truy vấn liên quan đến sách.
+UserDAO, UserDAOImpl: Quản lý truy vấn liên quan đến người dùng.
+OrderDAO, OrderDAOImpl: Quản lý đơn hàng.
+CartDAO, CartDAOImpl: Quản lý giỏ hàng.
+Thư mục entity: Đại diện các đối tượng trong cơ sở dữ liệu, gồm các lớp:
+Book_data: Thông tin sách.
+User: Thông tin người dùng.
+Cart: Chi tiết giỏ hàng.
+Order: Chi tiết đơn hàng.
+
+4. Kết luận
+4.1 Kết luận chung
+Dự án xây dựng hệ thống quản lý cửa hàng sách trực tuyến đã đạt được mục tiêu chính, bao gồm việc quản lý danh mục sách, hỗ trợ người dùng tìm kiếm và đặt mua, và cung cấp một giao diện thân thiện. Hệ thống được thiết kế theo kiến trúc MVC, đảm bảo khả năng bảo trì và mở rộng trong tương lai.
+Mặc dù còn một số hạn chế, dự án đã mang lại nền tảng cơ bản cho các cửa hàng sách truyền thống trong việc chuyển đổi số, tạo điều kiện để cạnh tranh hiệu quả hơn trên thị trường thương mại điện tử.
+4.2	Hạn chế và cải tiến
+Hạn chế : 
+-	Thiếu trang thanh toán đơn hàng: Hiện tại, hệ thống chưa tích hợp chức năng thanh toán trực tuyến, gây gián đoạn cho trải nghiệm người dùng.
+-	Chưa xây dựng phương pháp bảo mật: Các cơ chế bảo vệ thông tin người dùng và quyền quản trị vẫn còn hạn chế.
+-	Cơ sở dữ liệu chưa tối ưu: Khi xử lý lượng lớn dữ liệu, hiệu năng có thể bị giảm do chưa áp dụng các kỹ thuật tối ưu hóa.
+-	Thiếu công nghệ frontend: Giao diện người dùng chưa được tối ưu hóa, đặc biệt là trên các thiết bị di động hoặc trình duyệt khác nhau.
+Đề xuất cải tiến : 
+1.	Cải thiện chức năng và trải nghiệm người dùng:
+Bổ sung trang thanh toán trực tuyến với các phương thức thanh toán đa dạng.
+Tích hợp các tính năng tiện ích như chatbot hỗ trợ khách hàng, hệ thống thông báo tự động (email, SMS).
+Cung cấp bộ lọc nâng cao cho người quản trị để dễ dàng tìm kiếm và quản lý sản phẩm.
+2.	Nâng cao bảo mật:
+Tích hợp Spring Security để phân quyền truy cập và bảo vệ các thông tin nhạy cảm trong hệ thống.
+Áp dụng mã hóa mật khẩu và các thông tin quan trọng trước khi lưu trữ vào cơ sở dữ liệu.
+3.	Tối ưu cơ sở dữ liệu và truy vấn:
+Sử dụng Hibernate thay thế cho JDBC để giảm thiểu xử lý thủ công các truy vấn SQL, tăng hiệu quả quản lý dữ liệu.
+Tối ưu hóa cơ sở dữ liệu, áp dụng chỉ mục và các chiến lược phân vùng dữ liệu để nâng cao hiệu năng.
+4.	Cải tiến giao diện người dùng:
+Tích hợp Bootstrap hoặc các framework frontend khác để thiết kế giao diện hiện đại, thẩm mỹ và responsive, phù hợp với mọi loại thiết bị.
+Với các đề xuất cải tiến trên, hệ thống có tiềm năng không chỉ phục vụ tốt hơn cho các cửa hàng sách truyền thống mà còn trở thành một nền tảng quản lý kinh doanh hiệu quả và chuyên nghiệp, bắt kịp xu hướng thương mại điện tử hiện nay.
+
+
+
